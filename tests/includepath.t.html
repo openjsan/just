@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="../lib/JSAN.js"></script>
+    <script type="text/javascript" src="../lib/JSAN.js"></script>
+  </head>
+  <body>
+    <pre id="test"><script>JSAN.errorLevel = "die";
+        JSAN.addRepository('lib', '/js');
+        JSAN.use('Test.More', 'plan', 'ok', 'is');
+
+        plan({tests: 12});
+
+        ok(JSAN.includePath.length >= 4, 'added both libs');
+        var ret = JSAN.addRepository('fakelib');
+        is(ret, JSAN, 'addRepository() returns a JSAN');
+        is(JSAN.includePath[0], 'fakelib', 'addRepository() works');
+
+        var ret = JSAN.addRepository('test1', 'test2');
+        is(ret, JSAN, 'addRepository() returns a JSAN');
+        is(JSAN.includePath[0], 'test1', 'addRepository() works');
+        is(JSAN.includePath[1], 'test2', 'addRepository() works');
+        is(JSAN.includePath[2], 'fakelib', 'addRepository() works');
+
+        var ret = JSAN.addRepository( ['test3.1', 'test3.2'], 'test4');
+        is(ret, JSAN, 'addRepository() returns a JSAN');
+        is(JSAN.includePath[0], 'test3.1', 'addRepository() works');
+        is(JSAN.includePath[1], 'test3.2', 'addRepository() works');
+        is(JSAN.includePath[2], 'test4', 'addRepository() works');
+        is(JSAN.includePath[3], 'test1', 'addRepository() works');
+    </script></pre>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+Changes
+doc/html/JSAN.html
+doc/pod/JSAN.pod
+doc/text/JSAN.txt
+lib/JSAN.js
+MANIFEST			This list of files
+META.yml
+README
+tests/importarray.t.html
+tests/importfunctions.t.html
+tests/importmore.t.html
+tests/importnothing.t.html
+tests/importonly.t.html
+tests/includepath.t.html
+tests/index.html
+tests/lib/Test/Builder.js
+tests/lib/Test/Harness.js
+tests/lib/Test/Harness/Browser.js
+tests/lib/Test/Harness/Director.js
+tests/lib/Test/More.js
+tests/lib/Test/Simple.js
+tests/testerror.t.html
+tests/useclass.t.html

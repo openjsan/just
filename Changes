@@ -1,0 +1,53 @@
+      v0.11
+
+  - Added new response code checks for null (cached in Safari) and 304 (not
+    modified, seen in Opera by Pawel Chmielowski). (David Wheeler).
+
+      v0.10
+
+  - ########## Dude, what happened here??? ##########
+
+2005-07-26      v0.09
+
+  - Converted library away from object based and to class method based.
+  - Added JSAN.require() to load libraries but skip the importing system.
+  - Added JSAN.exporter() to skip the loading of libraries but invoke the
+    importing system.
+  - Lots of small refactoring.
+
+2005-07-18      v0.07
+
+  - Added a test to allow for explicitly importing nothing. (Rob Kinyon).
+  - Added code to support arrays or strings to use() (Rob Kinyon).
+  - Added code to support any number of arguments to addRepository() (Rob Kinyon).
+
+2005-07-14      v0.06
+
+  - Fixed a bug with importing prototypes (Rob Kinyon).
+
+2005-07-12      v0.05
+
+  - Fixed a bug with the auto-loading of include paths (Garrett Rooney).
+
+2005-07-10      v0.04
+
+  - Documentation typo fixes (Marshall Roch)
+  - Documentation POD fix (Garrett Rooney)
+
+2005-07-08      v0.03
+
+
+  - Added JSAN.use() method for much easier use.
+  - JSAN will now auto detect some library paths, which are,
+    in order of paths attempted.
+    - The path that JSAN.js was loaded from in the <script> tag, if available.
+    - '.',
+    - 'lib'
+  - Fixed docs to show proper Test.Simple use.
+  - INCOMPATIBLE: Moved addRepository() to a class method instead of instance
+    method.
+
+
+2005-07-03      v0.02
+
+  - Intial useful public release.
